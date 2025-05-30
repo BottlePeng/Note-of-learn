@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.CSS导入方式</title>
+    <!-- 优先级: 内联样式 > 内部样式 = 外部样式 -->
+    <!-- 导入外部样式 -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 内部样式表 -->
+    <style>
+        /* 修改p标签 */
+        p{
+            color: blue;
+            font-size: 26px;
+        }
+
+        /* 修改h2标签 */
+        h2{
+            color: green;
+        }
+    </style>
+    
+</head>
+<body>
+    <p>这是一个应用了css样式的文本</p>
+    <!-- 内联样式 -->
+    <h1 style="color: red;">这是一个h1标题标签,使用内联样式</h1>
+    <h2>这是一个h2标题标签,使用内部样式</h2>
+    <h3>这是一个h3标题标签,使用外部样式</h3>
+
+</body>
+</html>
