@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>4.HTML表单</title>
+</head>
+<body>
+    <form action="#">
+        <!-- label用于给输入框添加前缀,必须和input搭配使用 -->
+        <label for="username">用户名:</label>
+        <!-- 背景灰字显示 -->
+        <input type="text" id="username" placeholder="请输入用户名">
+        <br>
+        <br>
+        <label for="pwd" >密码:</label>
+        <!-- 默认输入 -->
+         <!-- password类型会使输入的内容隐藏 -->
+        <input type="password" id="pwd" value="请输入密码">
+        <br>
+        <br>
+        <label>性别:</label>
+        <!-- 单选框 -->
+        <input type="radio" name="gender">男
+        <!-- name用于给标签分类 -->
+        <input type="radio" name="gender">女
+        <input type="radio" name="gender">其他
+        <br>
+        <br>
+        <label for="">爱好:</label>
+        <!-- 多选框 -->
+         <input type="checkbox" name="hobby">唱歌
+         <input type="checkbox" name="hobby">跳舞
+         <input type="checkbox" name="hobby">RAP
+         <input type="checkbox" name="hobby">篮球
+        <br>
+        <br>
+        <!-- 提交按钮 将用户填写的信息条交给from的URL(某个网站或者服务器),一般由后端提供API-->
+        <input type="submit" value="上传">
+    </form>
+</body>
+</html>
