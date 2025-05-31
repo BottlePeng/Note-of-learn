@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.常见属性</title>
+
+    <style>
+        .block{
+            background-color: aqua;
+            width: 200px;
+            height: 100px;
+        }
+
+        .inline{
+            background-color: brown;
+            /* 行内元素没有宽度高度属性 */
+            width: 200px;
+        }
+
+        .inline-block{
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 符合属性有顺序要求 -->
+    <h1 style="font:bolder 50px '楷体';">这是一个font复合属性示例</h1>
+    <p style="line-height: 40px;">这是一段长文本这是一段长文本这是一段长文本这是一段长文本这是一段长文本这是一段长文本这是一段长文本这是一段长文本这是一段长文本这是一段长文本这是一段长文本这是一段长文本这是一段长文本</p>
+
+    <div class="block">这是一个块级元素</div>
+    <div class="block">这是一个块级元素</div>
+    <span class="inline">这是一个行内元素</span>
+    <img src="profile.png" alt="" class="inline-block">
+    <img src="profile.png" alt="" class="inline-block">
+
+    <p>display属性可以将各类标签进行互相转换</p>
+    <div style="background-color: blue;">这是一个转换成行内元素的div标签</div>
+    <!-- 转换之后就不再独占一行了 -->
+    <div style="display: inline;background-color: blue;">这是一个转换成行内元素的div标签</div>
+
+    <span style="display: inline-block;background-color: purple;width: 300px;">这是一个转换为行内块元素的span标签</span>
+</body>
+</html>
