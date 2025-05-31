@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div id="box1">这是一个id选择器标签</div>
+    <div class="box2">这是一个类选择器标签</div>
+    <div>普通的div标签</div>
+    <a href="#">跳转链接</a>
+    <br>
+    <button id="点击按钮1">点击按钮1</button>
+    <button id="点击按钮2">点击按钮2</button>
+
+    <script>
+        //使用document.get可以代理标签
+        var element_id = document.getElementById("box1")
+        console.log(element_id);
+
+        var element_class = document.getElementsByClassName("box2")[0]
+        console.log(element_class);
+
+        var element_tag = document.getElementsByTagName("div")
+        for (let box of element_tag) {
+                console.log(box);
+            }
+
+        element_id.innerHTML = '<a href="#">跳转链接</a>';//innerHTML会解析语句
+        element_class.innerText = '<a href="#">跳转链接</a>';//innerTextL不会解析,只会复制文本
+
+        element_tag[2].style.color = 'red';
+        element_tag[1].style.fontSize = '20px'; 
+
+        //DOM 属性绑定事件
+        var button_element1 = document.getElementById("点击按钮1")
+        //匿名函数,在语句内部使用,不需要也不能在其他地方调用
+        button_element1.onclick = function(){
+            alert('DOM 属性 案件触发');
+        }
+        //监听调用
+        var button_element2 = document.getElementById("点击按钮2")
+        button_element2.addEventListener('click', function(){
+            alert('通过 addEventListener监听触发');
+        });
+    </script>
+</body>
+</html>

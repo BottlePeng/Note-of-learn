@@ -132,3 +132,23 @@ let i = 0;
 while (i < 10) {
   console.log(++i);
 }
+
+// 函数
+function function1(input) {
+  return input;
+}
+
+console.log(function1("你好"));
+
+//点击事件,与"这是一个点击事件按钮"按钮绑定
+function click_event() {
+  alert("点击事件出发了"); //弹窗
+}
+//聚焦事件
+function focus_event() {
+  console.log("获取焦点");
+}
+//失焦事件
+function blur_event() {
+  console.log("失去焦点");
+}
